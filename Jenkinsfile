@@ -6,7 +6,7 @@ node {
     def buildInfo
 
     stage('Clone sources') {
-        git url: 'https://github.com/sidde3/spring-jpa.git'
+        git url: 'https://github.com/sidde3/spring-jpa.git' , branch: main
     }
 
     stage('Maven build') {
