@@ -14,6 +14,8 @@ node {
 
     stage('Maven build') {
         //buildInfo = rtMaven.run pom: 'maven-example/pom.xml', goals: 'clean package'
-        sh 'mvn clean package'
+        withMaven {
+            sh 'mvn clean package'
+        }
     }
 }
